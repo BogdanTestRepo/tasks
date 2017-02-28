@@ -1,0 +1,53 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/build_bolek
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/BogdanTestRepo/bolek.git # timeout=10
+Fetching upstream changes from https://github.com/BogdanTestRepo/bolek.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/BogdanTestRepo/bolek.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision eca15d4a70479ebcc5d5d505d2917ff8479fd0de (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f eca15d4a70479ebcc5d5d505d2917ff8479fd0de
+ > git rev-list eca15d4a70479ebcc5d5d505d2917ff8479fd0de # timeout=10
+[build_bolek] $ /bin/sh -xe /tmp/hudson6446782392914454953.sh
++ sudo docker login -u dockerdar -p qwerty123
+Login Succeeded
++ echo 10
++ sudo docker build -t dockerdar/bolek:10 .
+Sending build context to Docker daemon 56.83 kB
+Step 1/2 : FROM nginx
+latest: Pulling from library/nginx
+5040bd298390: Already exists
+31123d939af1: Already exists
+23f1bdd267a9: Already exists
+Digest: sha256:4296639ebdf92f035abf95fee1330449e65990223c899838283c9844b1aaac4c
+Status: Downloaded newer image for nginx:latest
+ ---> db079554b4d2
+Step 2/2 : COPY html /usr/share/nginx/html
+ ---> 8b992ab26bf7
+Removing intermediate container a6d956a95856
+Successfully built 8b992ab26bf7
++ sudo docker build -t dockerdar/bolek:latest .
+Sending build context to Docker daemon 56.83 kB
+Step 1/2 : FROM nginx
+ ---> db079554b4d2
+Step 2/2 : COPY html /usr/share/nginx/html
+ ---> Using cache
+ ---> 8b992ab26bf7
+Successfully built 8b992ab26bf7
++ sudo docker push dockerdar/bolek:10
+The push refers to a repository [docker.io/dockerdar/bolek]
+cc838a90014f: Preparing
+a82b6c66a6d4: Preparing
+1941ca4a7a84: Preparing
+a2ae92ffcd29: Preparing
+a82b6c66a6d4: Layer already exists
+1941ca4a7a84: Layer already exists
+a2ae92ffcd29: Layer already exists
+cc838a90014f: Pushed
+10: digest: sha256:956a14e50630054af265bd22c80784a4bcb06e3a40928b11c44ac9fb07d4590c size: 1155
++ sudo docker push dockerdar/bolek:latest
+The push refers to a repository [docker.io/dockerdar/bolek]

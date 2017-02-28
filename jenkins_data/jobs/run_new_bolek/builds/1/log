@@ -1,0 +1,11 @@
+Started by user [8mha:////4K5w2fzHO+4jEz+2c8gERRqIMjjyfpZ21OOBOaVdZxVuAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/run_new_bolek
+[run_new_bolek] $ /bin/sh -xe /tmp/hudson1802242269092072393.sh
++ sudo docker ps
++ grep bolek:latest
++ awk { print $1 }
++ sudo docker rm -f 0ce6f469c08b
+0ce6f469c08b
++ sudo docker run -d -P dockerdar/bolek:latest
+769690226e1d117a8a6369dbe68bef05f4914be61feda620af22bfa61cb91d5d
+Finished: SUCCESS

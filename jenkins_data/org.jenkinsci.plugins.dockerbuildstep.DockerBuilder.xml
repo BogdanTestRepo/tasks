@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.dockerbuildstep.DockerBuilder_-DescriptorImpl plugin="docker-build-step@1.39">
+  <dockerUrl>tcp://172.17.0.1:4243</dockerUrl>
+  <dockerVersion></dockerVersion>
+  <dockerCertPath></dockerCertPath>
+</org.jenkinsci.plugins.dockerbuildstep.DockerBuilder_-DescriptorImpl>

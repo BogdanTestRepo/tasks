@@ -1,0 +1,13 @@
+Started by upstream project "[8mha:AAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZB/az8JP2k0syclPgcoLJsfQCr+a/IxgAAAA==[0mbuild_lolek" build number [8mha:AAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZh/az8JP2k0syclPgcoLJsfWNDAL5P+jzIAAAA[0m31
+originally caused by:
+ Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/run_new_lolek
+[run_new_lolek] $ /bin/sh -xe /tmp/hudson7936741860503568476.sh
++ grep lolek.
++ awk { print $1 }
++ sudo docker ps
++ sudo docker rm -f f9d921c19720
+f9d921c19720
++ sudo docker run -d -P --name=lolek.7 dockerdar/lolek:latest
+91d270baeee456141397bd86e34b2903fa1bde3e5270e05026a74ddf4f49d636
+Finished: SUCCESS

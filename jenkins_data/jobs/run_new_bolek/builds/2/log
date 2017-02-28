@@ -1,0 +1,15 @@
+Started by upstream project "[8mha:AAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZB/az8JP2k0syclPgkoLJsfQDbmKXyxgAAAA==[0mbuild_bolek" build number [8mha:AAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQAygGfpZ+Un6SaWZOSnxSUBl2frmAG+NCU/HAAAA[0m7
+originally caused by:
+ Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/run_new_bolek
+[run_new_bolek] $ /bin/sh -xe /tmp/hudson5128116884107195330.sh
++ sudo docker ps
++ + awkgrep { print $1 }
+ bolek.
++ sudo docker rm -f 15d8428b6b4d 3d07625f1256
+15d8428b6b4d
+3d07625f1256
++ sudo rmi -f dockerdar/bolek:latest
+sudo: rmi: command not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

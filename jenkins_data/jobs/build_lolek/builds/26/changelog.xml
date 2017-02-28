@@ -1,0 +1,11 @@
+commit d5f3aa6f6696cc8b06f5a6c4b44ecd9c173f2e52
+tree da576298aff98447567cde1c03d84c8af016ab8d
+parent 15b720a6d7475ba2021888395247276704b75b18
+author BogdanTestRepo <dar-bodya@ya.ru> 2017-02-28 13:43:28 +0200
+committer GitHub <noreply@github.com> 2017-02-28 13:43:28 +0200
+
+    Update Dockerfile
+
+
+
+:100644 100644 7088e317f57e4fb07cfe647eb76e3958dd2a0563 f4f377cd1a054a09cf61dddd01133ce9979e451f M	Dockerfile

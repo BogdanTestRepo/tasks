@@ -1,0 +1,42 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/build_lolek
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/BogdanTestRepo/lolek.git # timeout=10
+Fetching upstream changes from https://github.com/BogdanTestRepo/lolek.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/BogdanTestRepo/lolek.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 15b720a6d7475ba2021888395247276704b75b18 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 15b720a6d7475ba2021888395247276704b75b18
+ > git rev-list 15b720a6d7475ba2021888395247276704b75b18 # timeout=10
+[build_lolek] $ /bin/sh -xe /tmp/hudson7840254129037746156.sh
++ sudo docker login -u dockerdar -p qwerty123
+Login Succeeded
++ echo 24
++ sudo docker build -t dockerdar/lolek:24 .
+Sending build context to Docker daemon 64.51 kB
+Step 1/2 : FROM nginx
+ ---> db079554b4d2
+Step 2/2 : COPY html/ /usr/share/nginx/html/
+ ---> 0b2ab5e0190b
+Removing intermediate container cd3e8915a24e
+Successfully built 0b2ab5e0190b
++ sudo docker push dockerdar/lolek:24
+The push refers to a repository [docker.io/dockerdar/lolek]
+6456c84680bb: Preparing
+a82b6c66a6d4: Preparing
+1941ca4a7a84: Preparing
+a2ae92ffcd29: Preparing
+a82b6c66a6d4: Layer already exists
+1941ca4a7a84: Layer already exists
+a2ae92ffcd29: Layer already exists
+6456c84680bb: Pushed
+24: digest: sha256:ca32ca8a59f5adce53e506db83819552b2ab1573acf447bb013b8095133d8912 size: 1155
++ sudo docker push dockerdar/lolek:latest
+The push refers to a repository [docker.io/dockerdar/lolek]
+tag does not exist: dockerdar/lolek:latest
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

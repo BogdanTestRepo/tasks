@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<github-plugin-configuration plugin="github@1.26.1">
+  <configs>
+    <github-server-config>
+      <apiUrl>https://api.github.com</apiUrl>
+      <manageHooks>true</manageHooks>
+      <credentialsId>6a2faf93-1f10-4b14-92a0-77cebeed0e9e</credentialsId>
+      <clientCacheSize>20</clientCacheSize>
+    </github-server-config>
+  </configs>
+  <hookUrl>http://localhost:8080/github-webhook/</hookUrl>
+  <hookSecretConfig>
+    <credentialsId>a801f5e0-972e-4bbd-b0f2-3ac09387d72b</credentialsId>
+  </hookSecretConfig>
+</github-plugin-configuration>

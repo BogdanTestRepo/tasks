@@ -1,0 +1,6 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/run_new_bolek
+[run_new_bolek] $ /bin/sh -xe /tmp/hudson3572248631314745969.sh
++ sudo docker run -d -P --name bolek.4 dockerdar/bolek:latest
+6b585eddb9ce957de4c57700e39761482629affed491563bb55925f5d62d6a06
+Finished: SUCCESS

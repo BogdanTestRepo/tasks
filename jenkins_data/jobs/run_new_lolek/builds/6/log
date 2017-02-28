@@ -1,0 +1,12 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/run_new_lolek
+[run_new_lolek] $ /bin/sh -xe /tmp/hudson4092550589631441873.sh
++ sudo docker ps
++ grep lolek.
++ awk { print $1 }
++ sudo docker rm -f 4c3b93659b1f fa2d1e87cc59
+4c3b93659b1f
+fa2d1e87cc59
++ sudo docker run -d -P --name=lolek.6 dockerdar/lolek:latest
+f9d921c1972000391888a564b86d64637341f49e1f93b07d734e0986242f2374
+Finished: SUCCESS

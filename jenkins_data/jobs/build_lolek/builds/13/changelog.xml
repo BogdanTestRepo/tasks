@@ -1,0 +1,11 @@
+commit 6af3b52dcf9b481c1fd0c927ce19340840ce4e74
+tree f2863dbf3742ad6c90920de7507cee055d25fc82
+parent a1b4706ea1f5b68e80cd40a76d80cb24d74bc4d6
+author Daragan <darbodya@gmail.com> 2017-02-28 12:40:59 +0200
+committer Daragan <darbodya@gmail.com> 2017-02-28 12:40:59 +0200
+
+    feat: version file
+
+
+
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	version.html

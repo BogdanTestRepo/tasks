@@ -1,0 +1,92 @@
+Started by user [8mha:////4K5w2fzHO+4jEz+2c8gERRqIMjjyfpZ21OOBOaVdZxVuAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/build_bolek
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/BogdanTestRepo/bolek.git # timeout=10
+Fetching upstream changes from https://github.com/BogdanTestRepo/bolek.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/BogdanTestRepo/bolek.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision eca15d4a70479ebcc5d5d505d2917ff8479fd0de (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f eca15d4a70479ebcc5d5d505d2917ff8479fd0de
+ > git rev-list 18ee75bbfe1455891549128b7ffcf47475b1bd25 # timeout=10
+[build_bolek] $ /bin/sh -xe /tmp/hudson1948112540363319790.sh
++ sudo docker login -u dockerdar -p qwerty123
+Login Succeeded
++ echo 2
++ sudo docker build -t dockerdar/bolek:2 .
+Sending build context to Docker daemon 56.83 kB
+Step 1/2 : FROM nginx
+ ---> db079554b4d2
+Step 2/2 : COPY html /usr/share/nginx/html
+ ---> bb36e0be97d0
+Removing intermediate container 5674103dc2cc
+Successfully built bb36e0be97d0
++ sudo docker build -t dockerdar/bolek:latest .
+Sending build context to Docker daemon 56.83 kB
+Step 1/2 : FROM nginx
+ ---> db079554b4d2
+Step 2/2 : COPY html /usr/share/nginx/html
+ ---> Using cache
+ ---> bb36e0be97d0
+Successfully built bb36e0be97d0
++ sudo docker push dockerdar/bolek:2
+The push refers to a repository [docker.io/dockerdar/bolek]
+b37368c6a230: Preparing
+a82b6c66a6d4: Preparing
+1941ca4a7a84: Preparing
+a2ae92ffcd29: Preparing
+a82b6c66a6d4: Layer already exists
+1941ca4a7a84: Layer already exists
+a2ae92ffcd29: Layer already exists
+b37368c6a230: Pushed
+2: digest: sha256:780dee2ab5517bf978fed24033043bd574b29dab3190ca1e5e097c33756afdbd size: 1155
++ sudo docker push dockerdar/bolek:latest
+The push refers to a repository [docker.io/dockerdar/bolek]
+b37368c6a230: Preparing
+a82b6c66a6d4: Preparing
+1941ca4a7a84: Preparing
+a2ae92ffcd29: Preparing
+1941ca4a7a84: Layer already exists
+b37368c6a230: Layer already exists
+a82b6c66a6d4: Layer already exists
+a2ae92ffcd29: Layer already exists
+latest: digest: sha256:780dee2ab5517bf978fed24033043bd574b29dab3190ca1e5e097c33756afdbd size: 1155
+Sending e-mails to: darbodya@gmail.com
+ERROR: Could not connect to SMTP host: localhost, port: 25
+[8mha:////4JvobMdxE19CNzYg3FaY5ikfSbWE1swX85n/pSUUjLHKAAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjavax.mail.MessagingException: Could not connect to SMTP host: localhost, port: 25;
+  nested exception is:
+	java.net.ConnectException: Connection refused
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1934)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:638)
+	at javax.mail.Service.connect(Service.java:295)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at hudson.tasks.MailSender.run(MailSender.java:129)
+	at hudson.tasks.Mailer.perform(Mailer.java:170)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:78)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:779)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:720)
+	at hudson.model.Build$BuildExecution.post2(Build.java:185)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:665)
+	at hudson.model.Run.execute(Run.java:1753)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:404)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:286)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:231)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1900)
+	... 18 more
+Finished: SUCCESS

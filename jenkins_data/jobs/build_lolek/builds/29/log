@@ -1,0 +1,89 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/build_lolek
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/BogdanTestRepo/lolek.git # timeout=10
+Fetching upstream changes from https://github.com/BogdanTestRepo/lolek.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/BogdanTestRepo/lolek.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a4b4b46b3abd50172e29bc4e54b3617f05d6cb2a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a4b4b46b3abd50172e29bc4e54b3617f05d6cb2a
+ > git rev-list a4b4b46b3abd50172e29bc4e54b3617f05d6cb2a # timeout=10
+[build_lolek] $ /bin/sh -xe /tmp/hudson2460497503592033543.sh
++ sudo docker login -u dockerdar -p qwerty123
+Login Succeeded
++ echo 29
++ sudo docker build -t dockerdar/lolek:29 .
+Sending build context to Docker daemon 75.78 kB
+Step 1/2 : FROM nginx
+ ---> db079554b4d2
+Step 2/2 : COPY html /usr/share/nginx/html
+ ---> 09f1d6dd5812
+Removing intermediate container d9d6d4310d00
+Successfully built 09f1d6dd5812
++ sudo docker build -t dockerdar/lolek:latest .
+Sending build context to Docker daemon 75.78 kB
+Step 1/2 : FROM nginx
+ ---> db079554b4d2
+Step 2/2 : COPY html /usr/share/nginx/html
+ ---> Using cache
+ ---> 09f1d6dd5812
+Successfully built 09f1d6dd5812
++ sudo docker push dockerdar/lolek:29
+The push refers to a repository [docker.io/dockerdar/lolek]
+a5a470412ab4: Preparing
+a82b6c66a6d4: Preparing
+1941ca4a7a84: Preparing
+a2ae92ffcd29: Preparing
+a82b6c66a6d4: Layer already exists
+1941ca4a7a84: Layer already exists
+a2ae92ffcd29: Layer already exists
+a5a470412ab4: Retrying in 5 seconds
+a5a470412ab4: Retrying in 4 seconds
+a5a470412ab4: Retrying in 3 seconds
+a5a470412ab4: Retrying in 2 seconds
+a5a470412ab4: Retrying in 1 second
+a5a470412ab4: Retrying in 10 seconds
+a5a470412ab4: Retrying in 9 seconds
+a5a470412ab4: Retrying in 8 seconds
+a5a470412ab4: Retrying in 7 seconds
+a5a470412ab4: Retrying in 6 seconds
+a5a470412ab4: Retrying in 5 seconds
+a5a470412ab4: Retrying in 4 seconds
+a5a470412ab4: Retrying in 3 seconds
+a5a470412ab4: Retrying in 2 seconds
+a5a470412ab4: Retrying in 1 second
+a5a470412ab4: Retrying in 15 seconds
+a5a470412ab4: Retrying in 14 seconds
+a5a470412ab4: Retrying in 13 seconds
+a5a470412ab4: Retrying in 12 seconds
+a5a470412ab4: Retrying in 11 seconds
+a5a470412ab4: Retrying in 10 seconds
+a5a470412ab4: Retrying in 9 seconds
+a5a470412ab4: Retrying in 8 seconds
+a5a470412ab4: Retrying in 7 seconds
+a5a470412ab4: Retrying in 6 seconds
+a5a470412ab4: Retrying in 5 seconds
+a5a470412ab4: Retrying in 4 seconds
+a5a470412ab4: Retrying in 3 seconds
+a5a470412ab4: Retrying in 2 seconds
+a5a470412ab4: Retrying in 1 second
+a5a470412ab4: Pushed
+29: digest: sha256:26068dbbf71114d8d4f147ab367a36219cbdaf9bd8a318599b12059e23ae62af size: 1155
++ sudo docker push dockerdar/lolek:latest
+The push refers to a repository [docker.io/dockerdar/lolek]
+a5a470412ab4: Preparing
+a82b6c66a6d4: Preparing
+1941ca4a7a84: Preparing
+a2ae92ffcd29: Preparing
+1941ca4a7a84: Layer already exists
+a82b6c66a6d4: Layer already exists
+a5a470412ab4: Layer already exists
+a2ae92ffcd29: Layer already exists
+latest: digest: sha256:26068dbbf71114d8d4f147ab367a36219cbdaf9bd8a318599b12059e23ae62af size: 1155
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of [8mha:AAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JP2i0rz4vNTy+Bygwmx9AFP80O7IAAAA[0mrun_new_lolek
+Finished: SUCCESS

@@ -1,0 +1,57 @@
+Started by user [8mha:////4K5w2fzHO+4jEz+2c8gERRqIMjjyfpZ21OOBOaVdZxVuAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/build_lolek
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/BogdanTestRepo/lolek.git # timeout=10
+Fetching upstream changes from https://github.com/BogdanTestRepo/lolek.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/BogdanTestRepo/lolek.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision d5f3aa6f6696cc8b06f5a6c4b44ecd9c173f2e52 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d5f3aa6f6696cc8b06f5a6c4b44ecd9c173f2e52
+ > git rev-list d5f3aa6f6696cc8b06f5a6c4b44ecd9c173f2e52 # timeout=10
+[build_lolek] $ /bin/sh -xe /tmp/hudson817273760417242501.sh
++ sudo docker login -u dockerdar -p qwerty123
+Login Succeeded
++ echo 27
++ sudo docker build -t dockerdar/lolek:27 .
+Sending build context to Docker daemon 69.12 kB
+Step 1/2 : FROM nginx
+ ---> db079554b4d2
+Step 2/2 : COPY html /usr/share/nginx/html
+ ---> 2f02529d631d
+Removing intermediate container 5bc89bd84c7c
+Successfully built 2f02529d631d
++ sudo docker build -t dockerdar/lolek:latest .
+Sending build context to Docker daemon 69.12 kB
+Step 1/2 : FROM nginx
+ ---> db079554b4d2
+Step 2/2 : COPY html /usr/share/nginx/html
+ ---> Using cache
+ ---> 2f02529d631d
+Successfully built 2f02529d631d
++ sudo docker push dockerdar/lolek:27
+The push refers to a repository [docker.io/dockerdar/lolek]
+3eca944358b9: Preparing
+a82b6c66a6d4: Preparing
+1941ca4a7a84: Preparing
+a2ae92ffcd29: Preparing
+1941ca4a7a84: Layer already exists
+a82b6c66a6d4: Layer already exists
+a2ae92ffcd29: Layer already exists
+3eca944358b9: Pushed
+27: digest: sha256:4038a9003a9d5e5834f74548cbd2ae17e15a329f433b876ce19786dd2834d6be size: 1155
++ sudo docker push dockerdar/lolek:latest
+The push refers to a repository [docker.io/dockerdar/lolek]
+3eca944358b9: Preparing
+a82b6c66a6d4: Preparing
+1941ca4a7a84: Preparing
+a2ae92ffcd29: Preparing
+3eca944358b9: Layer already exists
+1941ca4a7a84: Layer already exists
+a82b6c66a6d4: Layer already exists
+a2ae92ffcd29: Layer already exists
+latest: digest: sha256:4038a9003a9d5e5834f74548cbd2ae17e15a329f433b876ce19786dd2834d6be size: 1155
+Finished: SUCCESS

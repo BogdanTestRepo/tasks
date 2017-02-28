@@ -1,0 +1,41 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/build_lolek
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/BogdanTestRepo/lolek.git # timeout=10
+Fetching upstream changes from https://github.com/BogdanTestRepo/lolek.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/BogdanTestRepo/lolek.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a1b4706ea1f5b68e80cd40a76d80cb24d74bc4d6 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a1b4706ea1f5b68e80cd40a76d80cb24d74bc4d6
+ > git rev-list a1b4706ea1f5b68e80cd40a76d80cb24d74bc4d6 # timeout=10
+[build_lolek] $ /bin/sh -xe /tmp/hudson6033109282026192485.sh
++ docker build -t dockerdar/lolek:2 .
+Sending build context to Docker daemon 48.13 kB
+Step 1/2 : FROM nginx
+ ---> db079554b4d2
+Step 2/2 : COPY index.html /usr/share/nginx/html/index.html
+ ---> Using cache
+ ---> 99636042270b
+Successfully built 99636042270b
+ERROR: Build step failed with exception
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.lang.NullPointerException: uri was not specified
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:204)
+	at com.github.dockerjava.core.DefaultDockerClientConfig$Builder.withDockerHost(DefaultDockerClientConfig.java:348)
+	at org.jenkinsci.plugins.dockerbuildstep.DockerBuilder$DescriptorImpl.createDockerClient(DockerBuilder.java:125)
+	at org.jenkinsci.plugins.dockerbuildstep.DockerBuilder$DescriptorImpl.getDockerClient(DockerBuilder.java:216)
+	at org.jenkinsci.plugins.dockerbuildstep.DockerBuilder.perform(DockerBuilder.java:67)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:779)
+	at hudson.model.Build$BuildExecution.build(Build.java:205)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:162)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:534)
+	at hudson.model.Run.execute(Run.java:1741)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:410)
+Build step 'Execute Docker command' marked build as failure
+Finished: FAILURE

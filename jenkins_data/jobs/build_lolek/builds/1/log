@@ -1,0 +1,43 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins/workspace/build_lolek
+Cloning the remote Git repository
+Cloning repository https://github.com/BogdanTestRepo/lolek.git
+ > git init /var/jenkins/workspace/build_lolek # timeout=10
+Fetching upstream changes from https://github.com/BogdanTestRepo/lolek.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/BogdanTestRepo/lolek.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/BogdanTestRepo/lolek.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/BogdanTestRepo/lolek.git # timeout=10
+Fetching upstream changes from https://github.com/BogdanTestRepo/lolek.git
+ > git fetch --tags --progress https://github.com/BogdanTestRepo/lolek.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a1b4706ea1f5b68e80cd40a76d80cb24d74bc4d6 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a1b4706ea1f5b68e80cd40a76d80cb24d74bc4d6
+First time build. Skipping changelog.
+[build_lolek] $ /bin/sh -xe /tmp/hudson267330080741467080.sh
++ docker build -t dockerdar/lolek:1 .
+Sending build context to Docker daemon 48.13 kB
+Step 1/2 : FROM nginx
+latest: Pulling from library/nginx
+5040bd298390: Pulling fs layer
+31123d939af1: Pulling fs layer
+23f1bdd267a9: Pulling fs layer
+23f1bdd267a9: Download complete
+31123d939af1: Verifying Checksum
+31123d939af1: Download complete
+5040bd298390: Verifying Checksum
+5040bd298390: Download complete
+5040bd298390: Pull complete
+31123d939af1: Pull complete
+23f1bdd267a9: Pull complete
+Digest: sha256:4296639ebdf92f035abf95fee1330449e65990223c899838283c9844b1aaac4c
+Status: Downloaded newer image for nginx:latest
+ ---> db079554b4d2
+Step 2/2 : COPY index.html /usr/share/nginx/html/index.html
+ ---> 99636042270b
+Removing intermediate container 6c4557825c28
+Successfully built 99636042270b
+Finished: SUCCESS
